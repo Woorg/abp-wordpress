@@ -5,4 +5,5 @@ wp-config.php
 node_modules
 debug.log
 .git
+.phpintel
 wp-admin/content/debug.log
