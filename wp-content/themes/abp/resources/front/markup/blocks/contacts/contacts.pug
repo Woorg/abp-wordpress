@@ -1,0 +1,21 @@
+mixin contacts(data)
+    section.contacts
+        .contacts__container.container
+            h2.contacts__title.title Contacts
+            form.contacts__form.form(action="", method="post")
+                .form__field
+                    input.form__input(type="text", name="abp-name", value="", placeholder="Name")
+                .form__field
+                    input.form__input(type="text", name="abp-name", value="", placeholder="Email")
+                .form__field.form__field_select
+                    .form__select-arrow
+                    select.form__select(name="abp-select")
+                        option(disable) Subject
+                        option(value="") Subject 1
+                        option(value="") Subject 2
+                        option(value="") Subject 3
+
+                .form__field
+                    textarea.form__message(name="abp-message" placeholder="Comments or questions")
+
+                input.form__submit.contacts__form-submit.button(type="submit" value="Send")

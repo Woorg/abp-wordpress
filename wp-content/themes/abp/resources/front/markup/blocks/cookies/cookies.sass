@@ -1,0 +1,37 @@
+.cookies
+    height: 80px
+    display: none
+    background-color: rgba(27, 30, 100, 0.4)
+    color: #ffffff
+    +mq($medium)
+        height: 50px
+    &__container
+        height: 100%
+        align-items: center
+    &__text
+        margin-right: -10px
+        margin-left: -10px
+        font-size: 14px
+        font-weight: 400
+        line-height: 1.1
+        +mq($medium)
+            margin-right: 0
+            margin-left: 0
+            font-size: 17px
+            line-height: 1
+
+    &__link
+        padding-left: 4px
+        color: #fff
+        font-weight: 700
+        text-decoration: none
+        +tr(.3s ease)
+        &:hover
+            color: darken(#fff, 10)
+            +tr(.3s ease)
+
+    &__close
+        +resetbutton()
+        margin-left: 18px
+        width: 13px
+        height: 13px

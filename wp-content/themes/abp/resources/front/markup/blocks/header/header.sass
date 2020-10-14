@@ -1,0 +1,204 @@
+.header
+  position: relative
+  min-height: 700px
+  overflow: hidden
+  +mq($medium)
+    min-height: 863px
+  +mq($large)
+    // min-height: 1015px
+    min-height: 100vh
+  &:after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    content: ''
+    background: transparent
+    +tr(background .3s ease)
+
+  &__container
+    position: relative
+    z-index: 1
+    padding-top: 30px
+    padding-bottom: 30px
+    justify-content: space-between
+    +mq($medium)
+      padding-top: 28px
+    +mq($large)
+      padding-top: 20px
+      padding-bottom: 20px
+
+  &__top
+    align-items: flex-start
+    &:after
+      z-index: -1
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      content: ''
+      background: transparent
+      // +tr(background .1s ease)
+
+  &__nav
+    margin-top: 6px
+    margin-left: auto
+    +mq($medium)
+      margin-top: 38px
+
+  &__body
+    margin-left: auto
+    padding-top: 76px
+    max-width: 250px
+    width: 100%
+    display: flex
+    flex-direction: column
+    text-align: right
+    +mq($medium)
+      max-width: 460px
+      text-align: left
+    +mq($large)
+      max-width: 630px
+      // max-width: 100vh
+
+  &__title
+    margin-bottom: 23px
+    color: #1b1e64
+    font-size: 40px
+    line-height: 1.1
+    font-weight: 500
+    +mq($medium)
+      font-size: 44px
+      line-height: 1.227
+    +mq($large)
+      font-size: 60px
+      line-height: 1.233
+
+    span
+      display: block
+      color: rgba(1, 1, 1, 0.5)
+      font-size: 14px
+      font-weight: 400
+      line-height: 1
+      +mq($medium)
+        font-size: 18px
+
+      &:last-child
+        margin-top: 10px
+        display: block
+        color: #1b1e64
+        font-size: 40px
+        line-height: 1.1
+        font-weight: 500
+        +mq($medium)
+          display: block
+          font-size: 44px
+          line-height: 1.227
+        +mq($large)
+          font-size: 60px
+          line-height: 1.233
+
+  &__stats
+    display: flex
+    flex-direction: column
+
+  &__stats-item
+    margin-bottom: 32px
+
+    +mq($medium)
+      margin-bottom: 18px
+
+  &__stats-term
+    color: rgba(1, 1, 1, 0.4)
+    font-size: 50px
+    font-weight: 500
+    +mq($medium)
+      font-size: 80px
+
+  &__stats-desc
+    color: #1b1e64
+    font-size: 22px
+    font-weight: 500
+    +mq($medium)
+      margin-left: 87px
+      font-size: 26px
+
+  &__slider
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    overflow: hidden
+
+  &__slider-item
+    overflow: hidden
+    height: 700px
+    +mq($medium)
+      height: 863px
+    +mq($large)
+      // height: 1015px
+      height: 100vh
+
+  &__slider-image
+    img
+      width: 100%
+      height: 100%
+      object-position: 50% 0
+      object-fit: cover
+      +mq($large)
+        // object-position: 100% 0
+        object-position: 50% 0
+
+
+.header_open
+  &::after
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    content: ''
+    background: rgba(0, 0, 0, .4)
+    +tr(background .3s ease)
+
+  .header__container
+    padding-top: 0
+    padding-bottom: 0
+
+  .header__top
+    position: relative
+    margin-right: -40px
+    margin-left: -40px
+    padding-top: 30px
+    padding-right: 40px
+    padding-left: 40px
+
+    &::after
+      background: #ffffff
+      // animation: slide-in-bck-center 0.1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both
+
+
+.header_inner
+  min-height: auto
+  overflow: initial
+  +mq($medium)
+    min-height: auto
+  +mq($large)
+    min-height: auto
+
+.logo
+  &__icon
+    width: 64px
+    +mq($medium)
+      width: 80px
+
+.logo_second
+  .logo__icon
+    width: 158px
+    +mq($medium)
+      width: 178px
+    +mq($large)
+      width: 189px

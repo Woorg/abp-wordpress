@@ -1,0 +1,8 @@
+mixin cookies(data)
+    .cookies.cookies_active&attributes(attributes)
+        .cookies__container.container.flex
+            .cookies__text This site uses cookies to provide  you with a better user experience. By continuing to this website, you accept our
+                a.cookies__link(href="#") use of cookies
+
+            button.cookies__close
+                != pugHelpers.Icon.call(locals, {iconName: 'close-icon', className: 'cookies__close-icon'})

@@ -1,0 +1,25 @@
+mixin mission(data)
+    section.mission
+
+        .mission__container.container
+            .mission__w
+                h2.mission__title.title Mission
+                .mission__text.wysiwyg
+                    p Providing readers with the wisdom of hundreds of the most admired authors is at the heart of all we strive to achieve. The success of the classic nonfiction titles and best new releases speaks for itself, and our job is to give it a perfect voice for building a stronger inspiring culture among readers.
+                    p
+                        strong Being influencers, we are excited about the positive impact our work is having.
+                    p We continue to accelerate our penetration of developing markets, which allows us to unleash the potential of thousands of people all around the world. We are confident that this enlightenment as a specific form of art changes listeners’ lives for the better.
+                    p
+                        strong We work for you.
+
+
+        picture.mission__bg
+            source(type='image/webp' media='(min-width:1200px)' data-srcset='assets/images/general/mission-1.webp')
+            source(type='image/webp' media='(min-width:600px)' data-srcset='assets/images/general/mission-1-1.webp')
+            source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/mission-1-1-1.webp')
+
+            source(type='image/jpeg' media='(min-width:1200px)' data-srcset='assets/images/general/mission-1.jpg')
+            source(type='image/jpeg' media='(min-width:600px)' data-srcset='assets/images/general/mission-1-1.jpg')
+            source(type='image/jpeg' media='(min-width:300px)' data-srcset='assets/images/general/mission-1-1-1.jpg')
+
+            img.lazy(data-srcset="assets/images/general/mission-1.jpg 300w, assets/images/general/mission-1-1.jpg 600w assets/images/general/mission-1-1-1.jpg 1200w"  alt="")

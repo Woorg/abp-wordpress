@@ -1,0 +1,46 @@
+mixin global(data)
+    section.global&attributes(attributes)
+        .global__container.container
+            h2.global__title.title Go global
+            .global__row.flex
+                .global__col
+                    h3.global__col-title Branches
+                    ul.global__langs
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-1', className: 'global__icon'})
+                            .global__lang-title German
+
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-2', className: 'global__icon'})
+                            .global__lang-title French
+
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-3', className: 'global__icon'})
+                            .global__lang-title Italian
+
+                .global__col
+                    h3.global__col-title View on Audible
+                    ul.global__langs
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-4', className: 'global__icon'})
+                            .global__lang-title English
+
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-5', className: 'global__icon'})
+                            .global__lang-title Swedish
+
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-6', className: 'global__icon'})
+                            .global__lang-title Spanish
+
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-7', className: 'global__icon'})
+                            .global__lang-title Turkish
+
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-8', className: 'global__icon'})
+                            .global__lang-title Japanese
+
+                        li.global__lang.flex
+                            != pugHelpers.Icon.call(locals, {iconName: 'lang-9', className: 'global__icon'})
+                            .global__lang-title Norwegian

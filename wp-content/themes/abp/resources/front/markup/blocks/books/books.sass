@@ -1,0 +1,309 @@
+.books
+  overflow: hidden
+  &__container
+    padding-top: 40px
+    padding-bottom: 40px
+    +mq($large)
+      padding-bottom: 60px
+      padding-top: 65px
+
+  &__title
+    margin-bottom: 14px
+
+  &__text
+    margin-bottom: 30px
+    color: #1b1e64
+    font-size: 14px
+    font-weight: 400
+    line-height: 1.571
+    +mq($medium)
+      font-size: 18px
+      line-height: 1.888
+
+  &__categories
+    display: block
+    overflow: hidden
+    +mq($medium)
+      margin-right: -35px
+      margin-left: -35px
+      display: flex
+
+  &__category
+    position: relative
+    // width: 295px
+    height: 110px
+    flex-grow: 1
+    overflow: hidden
+    +tr(.9s ease)
+    +mq($medium)
+      width: 20%
+      height: 580px
+
+    &::after
+      z-index: 1
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      content: ''
+
+    &:hover
+      flex-grow: 5
+
+
+
+    // &:not(.books__category_active)
+    //   +tr(.9s ease)
+    //   +mq($medium)
+    //     width: 145px
+
+    //   .books__cat-w
+    //     padding-bottom: 46px
+    //     min-height: 100%
+    //     justify-content: center
+    //     align-items: flex-end
+    //   .books__cat-title
+    //     padding-right: 0
+    //     padding-left: 0
+
+    //   .books__cat-title_horizontal
+    //     display: none
+    //     text-align: left
+
+    //     +tr(opacity .6s ease)
+
+    //   .books__cat-title_vertical
+    //     position: absolute
+    //     bottom: 156px
+    //     display: block
+    //     min-width: 260px
+    //     text-align: left
+    //     line-height: 1
+    //     transform: rotate(-90deg)
+
+    //     +tr(.6s ease)
+
+  &__category_active
+    position: relative
+    min-height: 360px
+    +tr(.9s ease)
+    +mq($medium)
+      width: 98%
+    &::before
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      content: ''
+      background-color: rgba(0, 0, 0, 0.2)
+
+    .books__gradient
+      display: none
+
+    .books__banner
+      opacity: 1
+      visibility: visible
+      +tr( 1.3s ease)
+
+    .books__cat-w
+      opacity: 0
+
+  &__gradient
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 91%)
+
+  &__picture
+    position: relative
+    z-index: -1
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      +mq($medium)
+        width: auto
+        object-position: 50% 50%
+
+  &__banner
+    position: absolute
+    top: calc(50% - 10px)
+    left: 50%
+    padding-top: 15px
+    padding-right: 6px
+    padding-bottom: 23px
+    padding-left: 22px
+    max-width: 246px
+    width: 100%
+    min-height: 280px
+    opacity: 0
+    visibility: hidden
+    color: #fff
+    text-align: left
+    transform: translate(-50%, -50%) rotate(0deg)
+    +mq($medium)
+      padding-top: 30px
+      padding-bottom: 53px
+      padding-left: 36px
+      max-width: 429px
+      min-height: 367px
+
+    +mq($large)
+      padding-top: 27px
+      padding-right: 60px
+      padding-left: 48px
+      max-width: 587px
+      min-height: 342px
+
+    &::after
+      position: absolute
+      z-index: -1
+      top: 100%
+      left: 30px
+      content: ''
+      width: 89px
+      height: 32px
+      background: #fff
+
+  &__banner-badge
+    position: absolute
+    top: 100%
+    left: 0
+
+  &__banner-title
+    margin-bottom: 10px
+    padding-right: 10px
+    color: #ffffff
+    font-weight: 500
+    font-size: 24px
+    line-height: 1.214
+    text-align: left
+    opacity: 1
+    +tr(opacity .9s ease)
+    +mq($medium)
+      margin-right: 0
+      font-size: 30px
+      line-height: 1.433
+
+  &__banner-text
+    font-weight: 400
+    font-size: 14px
+    line-height: 1.571
+    +mq($medium)
+      margin-right: 0
+      font-size: 18px
+      line-height: 1.666
+
+  &__cat-w
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    min-height: 110px
+    display: flex
+    align-items: center
+    opacity: 1
+    +mq($medium)
+      padding-left: 0px
+      min-height: 178px
+
+  &__cat-title
+    padding-right: 15px
+    color: #ffffff
+    font-weight: 500
+    font-size: 24px
+    line-height: 1.416
+    text-align: left
+    opacity: 1
+    +mq($medium)
+      font-size: 20px
+
+      text-align: center
+    +mq($large)
+      padding-left: 0
+      font-size: 30px
+      line-height: 1.433
+
+  &__cat-w
+    padding-bottom: 0
+    padding-right: 0
+    padding-left: 15px
+
+    text-align: left
+    +mq($medium)
+      padding-bottom: 46px
+      padding-right: 15px
+      padding-left: 15px
+
+      min-height: 100%
+      justify-content: center
+      align-items: flex-end
+  &__cat-title
+    padding-right: 0
+    padding-left: 0
+
+  &__cat-title_horizontal
+    display: block
+    +mq($medium)
+      text-align: center
+
+    +tr(opacity .6s ease)
+
+  &__cat-title_vertical
+    position: absolute
+    bottom: 156px
+    display: none
+    min-width: 260px
+    text-align: left
+    line-height: 1
+    transform: rotate(-90deg)
+
+    +tr(.6s ease)
+
+
+  &__cat-w_active
+    padding-bottom: 0
+    text-align: left
+    +mq($medium)
+      padding-left: 0
+      padding-bottom: 46px
+      min-height: 100%
+      justify-content: center
+      align-items: flex-end
+      opacity: 1
+
+    .books__cat-title
+      position: relative
+
+      padding-right: 0
+      padding-left: 0
+
+    .books__cat-title_horizontal
+      display: block
+      +mq($medium)
+        display: none
+        +tr(opacity .6s ease)
+
+    .books__cat-title_vertical
+      display: none
+      +mq($medium)
+        position: absolute
+        bottom: 156px
+        display: block
+        min-width: 260px
+        text-align: left
+        line-height: 1
+        transform: rotate(-90deg)
+        +tr(.6s ease)
+      +mq($large)
+        bottom: 216px
+        min-width: 360px
+
+
+

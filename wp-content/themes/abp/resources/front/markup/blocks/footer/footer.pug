@@ -1,0 +1,40 @@
+mixin footer(data)
+    footer.footer
+        .footer__container.container
+            .footer__row.flex
+                .footer__col
+                    a.footer__logo.logo.logo_second(href="#")
+                        != pugHelpers.Icon.call(locals, {iconName: 'logo-w', className: 'logo__icon'})
+                .footer__col
+                    nav.footer__nav.nav-sec
+                        ul.nav-sec__list.flex
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Top books
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Story
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Subsidiaries
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Video
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Mission
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Team
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Press room
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Contacts
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Go global
+                .footer__col
+                    nav.footer__nav-sec.nav-sec.nav-sec_second
+                        ul.nav-sec__list
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Privacy policy
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Terms of use
+                            li.nav-sec__item
+                                a.nav-sec__link(href="#") Impressum
+
+
+            .footer__copyright @ 2010 - 2020 abp publishing

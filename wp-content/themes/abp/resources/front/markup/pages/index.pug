@@ -1,0 +1,139 @@
+doctype html
+html(class="no-js", lang="ru")
+
+    include ../blocks/head/head.pug
+    include ../blocks/header/header.pug
+    include ../blocks/nav/nav.pug
+    include ../blocks/footer/footer.pug
+    include ../blocks/cookies/cookies.pug
+    include ../blocks/books/books.pug
+    include ../blocks/mission/mission.pug
+    include ../blocks/story/story.pug
+    include ../blocks/global/global.pug
+    include ../blocks/press/press.pug
+    include ../blocks/contacts/contacts.pug
+
+
+    head
+        +head(head.defaults)
+    body.page
+        +header()
+        main.page__inner
+            +books()
+            +mission()
+            +story()
+            +global()
+            +press()
+            +contacts()
+
+        .page__bottom
+            +footer()
+
+        |%=symbols=%
+
+
+
+        //- script(async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyDDO60TDSumlziHzbybxGGbAEegP7zLX0Y&callback=initMap" )
+        script(src='%=static=%js/separate-js/lazyload.min.js' )
+        script(src='%=static=%js/separate-js/jquery.min.js')
+        script(src='%=static=%js/separate-js/slick.min.js')
+        //- script(src='%=static=%js/separate-js/jquery.magnific-popup.min.js')
+
+        script(src='%=static=%js/separate-js/jquery.mask.min.js' )
+
+        script(src='%=static=%js/main%=hash=%%=min=%.js')
+
+        //- script.
+        //-   function initMap() {
+        //-       // The location of Uluru
+        //-       var uluru = {lat: 55.768613, lng: 37.635394 };
+        //-       // The map, centered at Uluru
+        //-       var map = new google.maps.Map( document.getElementById('map'), {
+        //-           zoom: 17,
+        //-           center: uluru,
+        //-           disableDefaultUI: true,
+        //-           zoomControl: true,
+        //-           styles: [
+        //-             {
+        //-                 "featureType": "administrative",
+        //-                 "elementType": "labels.text.fill",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "color": "#444444"
+        //-                     }
+        //-                 ]
+        //-             },
+        //-             {
+        //-                 "featureType": "landscape",
+        //-                 "elementType": "all",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "color": "#f2f2f2"
+        //-                     }
+        //-                 ]
+        //-             },
+        //-             {
+        //-                 "featureType": "poi",
+        //-                 "elementType": "all",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "visibility": "off"
+        //-                     }
+        //-                 ]
+        //-             },
+        //-             {
+        //-                 "featureType": "road",
+        //-                 "elementType": "all",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "saturation": -100
+        //-                     },
+        //-                     {
+        //-                         "lightness": 45
+        //-                     }
+        //-                 ]
+        //-             },
+        //-             {
+        //-                 "featureType": "road.highway",
+        //-                 "elementType": "all",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "visibility": "simplified"
+        //-                     }
+        //-                 ]
+        //-             },
+        //-             {
+        //-                 "featureType": "road.arterial",
+        //-                 "elementType": "labels.icon",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "visibility": "off"
+        //-                     }
+        //-                 ]
+        //-             },
+        //-             {
+        //-                 "featureType": "transit",
+        //-                 "elementType": "all",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "visibility": "off"
+        //-                     }
+        //-                 ]
+        //-             },
+        //-             {
+        //-                 "featureType": "water",
+        //-                 "elementType": "all",
+        //-                 "stylers": [
+        //-                     {
+        //-                         "color": "#5199ff"
+        //-                     },
+        //-                     {
+        //-                         "visibility": "on"
+        //-                     }
+        //-                 ]
+        //-             }
+        //-         ]
+        //-         }
+        //-       );
+        //-       var marker = new google.maps.Marker({position: uluru, icon: 'assets/images/general/marker.svg', map: map});
+        //-     }

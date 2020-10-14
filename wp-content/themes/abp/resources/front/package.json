@@ -1,0 +1,31 @@
+{
+  "name": "awesome_project",
+  "version": "1.0.0",
+  "description": "Your awesome project description",
+  "main": "gulpfile.js",
+  "directories": {},
+  "dependencies": {
+    "@babel/core": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
+    "fast-average-color": "^6.1.0",
+    "jquery": "^3.4.1",
+    "jquery-mask-plugin": "^1.14.16",
+    "js-cookie": "^2.2.1",
+    "magnific-popup": "^1.1.0",
+    "rfs": "^9.0.0",
+    "scroll-tabs": "^1.0.1",
+    "slick-carousel": "^1.8.1",
+    "slick-slider": "^1.8.2",
+    "svg4everybody": "^2.1.9",
+    "tabbyjs": "^12.0.3",
+    "tiny-slider": "^2.9.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

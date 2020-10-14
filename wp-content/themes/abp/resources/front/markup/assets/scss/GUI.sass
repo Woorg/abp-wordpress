@@ -1,0 +1,80 @@
+.flex
+  display: flex
+
+.title
+  color: #1b1e64
+  font-size: 30px
+  font-weight: 700
+  line-height: 1
+  +mq($medium)
+    font-size: 34px
+
+  +mq($large)
+    font-size: 50px
+    line-height: 1.22
+
+.button
+  +resetbutton()
+  padding-top: 8px
+  padding-right: 55px
+  padding-bottom: 9px
+  padding-left: 55px
+  height: 42px
+  background-color: #1b1e64
+  color: #ffffff
+  font-size: 16px
+  font-weight: 700
+  line-height: 1
+  text-decoration: none
+  +tr(background-color .3s ease)
+
+  &:hover
+    background-color: lighten(#1b1e64, 10)
+    +tr(background-color .3s ease)
+
+
+.wysiwyg
+  h1,
+  h2,
+  h3
+    margin-bottom: 23px
+    color: #1b1e64
+    font-size: 30px
+    font-weight: 700
+    line-height: 1
+    +mq($medium)
+      font-size: 34px
+    +mq($large)
+      font-size: 50px
+      line-height: 1.22
+
+  h3
+    +mq($medium)
+      font-size: 27px
+    +mq($large)
+      font-size: 41px
+
+  p
+    margin-bottom: 15px
+    color: #000000
+    font-weight: 400
+    font-size: 14px
+    line-height: 1.6
+    +mq($medium)
+      margin-bottom: 19px
+      font-size: 18px
+      line-height: 1.888
+
+    &:last-of-type
+      margin-bottom: 16px
+      +mq($medium)
+        margin-bottom: 32px
+
+  strong
+    font-weight: 300
+    font-size: 18px
+    line-height: 1.571
+
+    +mq($medium)
+      font-size: 30px
+      line-height: 1.7

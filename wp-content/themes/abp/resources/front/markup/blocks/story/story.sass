@@ -1,0 +1,371 @@
+.story
+    overflow: hidden
+    &__container
+        padding-top: 40px
+        padding-bottom: 40px
+        // padding-bottom: 170px
+
+        +mq($large)
+            padding-top: 60px
+            padding-bottom: 98px
+    &__title
+        margin-bottom: 30px
+        +mq($large)
+            margin-bottom: 0
+
+    &__timeline
+        position: relative
+        margin-right: -80px
+        margin-left: -80px
+        // overflow: hidden
+        +mq($medium)
+            margin-right: -70px
+            margin-left: -70px
+        +mq($large)
+            margin-right: 0
+            margin-left: 0
+            padding-bottom: 308px
+            min-height: 582px
+        &::after
+            +mq($large)
+                position: absolute
+                top: calc(100% - 308px)
+                left: 108px
+                content: ''
+                width: 1064px
+                height: 308px
+                background: url('../images/general/story-line.svg') 0 0 no-repeat
+                background-size: cover
+
+
+
+        &.slick-dotted.slick-slider
+            margin-bottom: 0
+
+        .slick-list
+            padding-right: 40px !important
+            padding-left: 40px !important
+            +mq($medium)
+                padding-right: 35px !important
+                padding-left: 35px !important
+        //     min-height: 408px
+        //     overflow: initial
+
+    &__item
+        position: relative
+        padding-right: 40px
+        padding-left: 40px
+        padding-bottom: 116px
+        min-height: 379px
+        // display: flex
+        +mq($medium)
+            padding-right: 35px
+            padding-left: 35px
+
+        +mq($large)
+            position: absolute
+            padding-right: 0
+            padding-left: 0
+            padding-bottom: 0
+            width: 295px
+            min-height: auto
+
+        &:after
+            position: absolute
+            top: calc(100% - 116px)
+            left: 0
+            content: ""
+            position: absolute
+            width: 100%
+            height: 3px
+            content: ''
+            background: #1b1e64
+            +mq($large)
+                display: none
+
+    &__item-dotted
+        position: absolute
+        z-index: -1
+        top: 0
+        // left: calc(50% - 40px)
+        left: calc(50% + 1px)
+        width: 2px
+        height: calc(100% - 114px)
+        background: url('../images/general/line.svg') 50% 0 repeat-y
+        background-size: 100%
+        +mq($large)
+            position: absolute
+            top: 100%
+            left: calc(50% - 5px)
+            content: ''
+            width: 2px
+            display: none
+            background: url('../images/general/line.svg') 50% 0 repeat-y
+            background-size: 100%
+            transform: translateX(-50%)
+
+    &__item-dot
+        position: absolute
+        top: calc(100% - 121px)
+        // left: calc(50% - 47px)
+        left: calc(50% - 7px)
+        width: 16px
+        height: 12px
+        background-color: #1b1e64
+        border-radius: 50%
+        +mq($large)
+            display: none
+
+    &__item[data-slick-index="5"]
+        &:before
+            position: absolute
+            top: calc(100% - 122px)
+            left: calc(100% - 54px)
+            content: ""
+            width: 23px
+            height: 19px
+            background: url('../images/general/story-line-arrow.svg') 0 0 no-repeat
+            background-size: cover
+            transform: rotate(19deg)
+        &:after
+            right: 40px
+            width: calc(100% - 34px)
+
+    &__item[data-slick-index="0"]
+        &:after
+            left: 40px
+
+    &__item
+        &:nth-child(1)
+            +mq($large)
+                bottom: 60px
+                // left: 6px
+                left: 0
+                width: 263px
+                height: 166px
+
+            .story__item-w
+                &::after
+                    +mq($large)
+                        top: 100%
+                        height: 44px
+
+            .story__year
+                +mq($large)
+                    top: calc(100% + 62px)
+
+        &:nth-child(2)
+            +mq($large)
+                bottom: 338px
+                left: 154px
+                width: 290px
+                height: 153px
+            .story__item-w
+                // +mq($large)
+                //     background: url('../images/general/story-item-2.svg') 0% 100% no-repeat
+                &::after
+                    +mq($large)
+                        top: calc(100% + 2px)
+                        height: 288px
+                        left: 50%
+
+            .story__year
+                +mq($large)
+                    top: calc(100% + 310px)
+
+        &:nth-child(3)
+            +mq($large)
+                bottom: 146px
+                left: 310px
+                width: 320px
+                height: 164px
+            .story__item-w
+                +mq($large)
+                    width: auto
+                    // background: url('../images/general/story-item-3.svg') 100% 100% no-repeat
+                &::after
+                    +mq($large)
+                        top: calc(100% + 2px)
+                        left: calc(50% + 1px)
+                        height: 45px
+
+            .story__year
+                +mq($large)
+                    top: calc(100% + 61px)
+                    left: calc(50% + 32px)
+
+        &:nth-child(4)
+            +mq($large)
+
+                bottom: 406px
+                left: 503px
+                width: 275px
+                height: 153px
+                background-position: calc(100% + 15px) 100%
+            .story__item-w
+                // +mq($large)
+                //     background: url('../images/general/story-item-4.svg') 100% 100% no-repeat
+                &::after
+                    +mq($large)
+                        top: calc(100% + 2px)
+                        height: 272px
+                        left: 50%
+
+            .story__year
+                +mq($large)
+                    top: calc(100% + 292px)
+                    left: calc(50% + 32px)
+
+        &:nth-child(5)
+            +mq($large)
+                bottom: 236px
+                left: 658px
+                width: 276px
+                height: 132px
+            .story__item-w
+                // +mq($large)
+                //     background: url('../images/general/story-item-5.svg') 100% 100% no-repeat
+                &::after
+                    +mq($large)
+                        top: calc(100% + 2px)
+                        height: 60px
+                        left: 50%
+
+            .story__year
+                +mq($large)
+                    top: calc(100% + 72px)
+
+        &:nth-child(6)
+            +mq($large)
+                bottom: 455px
+                left: 840px
+                width: 248px
+                height: 160px
+            .story__item-w
+                // +mq($large)
+                //     background: url('../images/general/story-item-6.svg') 100% 100% no-repeat
+                &::after
+                    +mq($large)
+                        top: calc(100% + 2px)
+                        height: 244px
+                        left: 50%
+
+            .story__year
+                +mq($large)
+                    top: calc(100% + 265px)
+                    left: calc(50% + 32px)
+
+    &__item-w
+        position: relative
+        margin-right: auto
+        margin-left: auto
+        padding-right: 35px
+        padding-left: 35px
+        position: relative
+        padding-top: 25px
+        padding-right: 25px
+        padding-bottom: 50px
+        padding-left: 25px
+        // width: 295px
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        background: #E5E5EE
+        background-size: cover
+
+        .story__item-arrow
+            position: absolute
+            top: 100%
+            left: 50%
+            content: ""
+            transform: translateX(-50%)
+
+        +mq($large)
+            position: absolute
+            margin-right: 0
+            padding-top: 20px
+            padding-right: 7px
+            padding-bottom: 43px
+            padding-left: 23px
+            width: 295px
+            max-width: 100%
+            min-height: initial
+
+        &::after,
+        &::before
+            position: absolute
+            top: 100%
+            content: ''
+            transform: translateX(-50%)
+
+        &::after
+            +mq($large)
+                position: absolute
+                z-index: -1
+                top: 100%
+                left: calc(50% + 1px)
+                content: ''
+                width: 2px
+                background: url('../images/general/line.svg') 50% 0 repeat-y
+                background-size: 100%
+                transform: translateX(-50%)
+
+
+
+    &__year
+        position: absolute
+        top: calc(100% - 100px)
+        left: 50%
+
+        content: ''
+        color: #1b1e64
+        font-size: 30px
+        font-weight: 700
+        line-height: 1
+        transform: translateX(-50%)
+        +mq($large)
+            left: calc(50% + 20px)
+            font-size: 26px
+            font-weight: 500
+
+
+    &__item-text
+        font-weight: 400
+        font-size: 14px
+        line-height: 1.571
+        +mq($medium)
+            font-size: 18px
+
+        +mq($large)
+            line-height: 1.888
+
+    .slick-dots
+        // bottom: 0
+        bottom: 0
+        font-size: 0
+        li
+            margin: 0
+            margin-right: 8px
+            width: 7px
+            height: 7px
+            padding: 0
+            cursor: pointer
+            &.slick-active
+                button
+                    background-color: #1b1e64
+
+            &:last-child
+                margin-right: 0
+        button
+            padding: 0
+            width: 7px
+            height: 7px
+            background-color: rgba(27, 30, 100, 0.1)
+            border-radius: 50%
+            +tr(.3s ease)
+
+            &::before
+                display: none
+            &:hover
+                background-color: #1b1e64
+                +tr(.3s ease)

@@ -1,0 +1,62 @@
+html,
+body
+  height: 100%
+
+.page
+  position: relative
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+  background: #fff
+  color: #000
+  font-family: $g
+  font-weight: 600
+  font-size: 14px
+  font-display: swap
+
+  &__inner
+    flex-grow: 1
+    flex-shrink: 0
+    flex-basis: auto
+
+
+  &__cookie-visible
+    .page__cookies
+      z-index: 1
+      position: fixed
+      top: calc(100% - 80px)
+      left: 0
+      right: 0
+      display: block
+      +mq($medium)
+        top: calc(100% - 50px)
+
+
+.container
+  margin: auto
+  padding-right: 40px
+  padding-left: 40px
+  width: 100%
+  max-width: 1200px
+  min-width: 320px
+  +mq($medium)
+    padding-right: 60px
+    padding-left: 60px
+  +mq($large)
+    padding-right: 15px
+    padding-left: 15px
+
+img
+  max-width: 100%
+  height: auto
+
+
+.articles
+  padding-top: 40px
+  padding-bottom: 40px
+  +mq($medium)
+    padding-top: 50px
+    padding-bottom: 50px
+  +mq($large)
+    padding-top: 60px
+    padding-bottom: 60px

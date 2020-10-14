@@ -1,0 +1,73 @@
+mixin header(data)
+    header.header&attributes(attributes)
+        .header__container.container
+
+            .header__top.flex
+                a.header__logo.logo(href="#")
+                    != pugHelpers.Icon.call(locals, {iconName: 'logo', className: 'logo__icon'})
+
+                +nav().header__nav
+
+            .header__body
+                h1.header__title
+                    span International  publishing house
+                    | Thousands of stories
+                    span Hear yours
+
+                dl.header__stats
+                    .header__stats-item
+                        dt.header__stats-term 700+
+                        dd.header__stats-desc  titles in the catalogue
+                    .header__stats-item
+                        dt.header__stats-term 17000+
+                        dd.header__stats-desc reviews at Audible
+
+        +cookies().header__cookies
+
+        .header__slider
+            .header__slider-item
+                picture.header__slider-image
+                    source(type='image/webp' media='(min-width:1200px)' data-srcset='assets/images/general/hero-img-1.webp')
+                    source(type='image/webp' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-1-1.webp')
+                    source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-1-1-1.webp')
+
+                    source(type='image/jpeg' media='(min-width:1200px)' data-srcset='assets/images/general/hero-img-1.jpg')
+                    source(type='image/jpeg' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-1-1.jpg')
+                    source(type='image/jpeg' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-1-1-1.jpg')
+                    img.lazy(data-srcset="assets/images/general/hero-img-1-1-1.jpg 300w, assets/images/general/hero-img-1-1.jpg 600w, assets/images/general/hero-img-1.jpg 1200w" alt="")
+
+            .header__slider-item
+                picture.header__slider-image
+                    source(type='image/webp' media='(min-width:1200px)' data-srcset='assets/images/general/hero-img-2.webp')
+                    source(type='image/webp' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-2-2.webp')
+                    source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-2-2-2.webp')
+
+                    source(type='image/jpeg' media='(min-width:1190px)' data-srcset='assets/images/general/hero-img-2.jpg')
+                    source(type='image/jpeg' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-2-2.jpg')
+                    source(type='image/jpeg' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-2-2-2.jpg')
+
+                    img.lazy(data-srcset="assets/images/general/hero-img-2-2-2.jpg 300w, assets/images/general/hero-img-2-2.jpg 600w, assets/images/general/hero-img-2.jpg 1200w" alt="")
+
+            .header__slider-item
+                picture.header__slider-image
+                    source(type='image/webp' media='(min-width:1200px)' data-srcset='assets/images/general/hero-img-3.webp')
+                    source(type='image/webp' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-3-3.webp')
+                    source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-3-3-3.webp')
+
+                    source(type='image/jpeg' media='(min-width:1200px)' data-srcset='assets/images/general/hero-img-3.jpg')
+                    source(type='image/jpeg' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-3-3.jpg')
+                    source(type='image/jpeg' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-3-3-3.jpg')
+
+                    img.lazy(data-srcset="assets/images/general/hero-img-3-3-3.jpg 300w, assets/images/general/hero-img-3-3.jpg 600w, assets/images/general/hero-img-3.jpg 1200w"  alt="")
+
+            .header__slider-item
+                picture.header__slider-image
+                    source(type='image/webp' media='(min-width:1200px)' data-srcset='assets/images/general/hero-img-4.webp')
+                    source(type='image/webp' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-4-4.webp')
+                    source(type='image/webp' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-4-4-4.webp')
+
+                    source(type='image/jpeg' media='(min-width:1200px)' data-srcset='assets/images/general/hero-img-4.jpg')
+                    source(type='image/jpeg' media='(min-width:600px)' data-srcset='assets/images/general/hero-img-4-4.jpg')
+                    source(type='image/jpeg' media='(min-width:300px)' data-srcset='assets/images/general/hero-img-4-4-4.jpg')
+
+                    img.lazy(data-srcset="assets/images/general/hero-img-4-4-4.jpg 300w, assets/images/general/hero-img-4-4.jpg 600w, assets/images/general/hero-img-4.jpg 1200w"  alt="")
